@@ -15,7 +15,7 @@ public class Calculation {
         operations.put("*",(x,y)->x*y);
 
     }
-    public double calculate(String str , double x1 , double x2){
+    public double calculate(double x1 , double x2, String str){
         return operations.get(str).apply(x1,x2);
     }
 }

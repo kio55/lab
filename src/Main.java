@@ -13,13 +13,20 @@ public class Main {
                     Stack linkedStack;
                     System.out.println("Fill the list");
                     linkedStack = FillStack.fillStack(scan);
-                    System.out.println(linkedStack.toString());
+                    GetResult result = new GetResult();
+                    Stack news = result.Clone(linkedStack);
+                    GetResult test = new GetResult();
+                    Stack testt = test.calc(news);
+                    while (testt.size() != 1){
+                        news = result.Clone(testt);
+                        testt = test.calc(news);
+                    }
+                    System.out.println(testt.toString());
 
                     break;
                 case 2:
-                    String str = scan.next();
-                    System.out.println(InputСheck.CheckOperation(str));
-                    System.out.println(InputСheck.CheckOperation(str).contains(" gg") ? 1 : 2);
+
+
 
                 default:
                     System.out.println("Enter again");

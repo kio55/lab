@@ -18,4 +18,14 @@ public class FillStack {
         }
     }
 
+    public static Stack fillStackLine(final Scanner scan) {
+        Stack linkedStack = new Stack();
+        String[] line = scan.next("\n").split(" ");
+        for (String s : line) {
+            if (InputСheck.isNumber(s) || InputСheck.CheckOperation(s).contains(" gg")) return null;
+            linkedStack.push(s);
+        }
+        return linkedStack;
+
+    }
 }

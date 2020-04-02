@@ -7,8 +7,8 @@ public class Stack {
         linkedList.pushTop(value);
     }
 
-    public void pop() {
-        linkedList.pop();
+    public String pop() {
+        return linkedList.pop();
     }
 
     public String peek() {
